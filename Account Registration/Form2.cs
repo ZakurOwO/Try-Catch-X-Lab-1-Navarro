@@ -26,7 +26,7 @@ namespace Account_Registration
         {
             InitializeComponent();
 
-            
+
             DelProgram = new StudentInfoClass.DelegateText(StudentInfoClass.GetProgram);
             DelLastName = new StudentInfoClass.DelegateText(StudentInfoClass.GetLastName);
             DelFirstName = new StudentInfoClass.DelegateText(StudentInfoClass.GetFirstName);
@@ -39,7 +39,7 @@ namespace Account_Registration
 
         private void Form2_Load(object sender, EventArgs e)
         {
-            
+
             LabelProgram.Text = DelProgram(StudentInfoClass.Program);
             LabelLastName.Text = DelLastName(StudentInfoClass.LastName);
             LabelFirstName.Text = DelFirstName(StudentInfoClass.FirstName);
@@ -52,8 +52,7 @@ namespace Account_Registration
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.DialogResult = DialogResult.OK;
-            this.Close();
+           this.Close();
         }
     }
 }

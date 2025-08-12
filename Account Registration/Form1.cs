@@ -79,6 +79,8 @@ namespace Account_Registration
         private void button1_Click(object sender, EventArgs e)
         {
             
+
+
             StudentInfoClass.FirstName = FirstNameTextBox.Text;
             StudentInfoClass.LastName = LastNameTextBox.Text;
             StudentInfoClass.MiddleName = MiddleNameTextBox.Text;
@@ -89,10 +91,12 @@ namespace Account_Registration
             StudentInfoClass.StudentNo = long.Parse(StudentNoTextBox.Text);
 
             
+            this.Hide();
+
             Form2 frmConfirm = new Form2();
             if (frmConfirm.ShowDialog() == DialogResult.OK)
             {
-            
+               
                 FirstNameTextBox.Clear();
                 LastNameTextBox.Clear();
                 MiddleNameTextBox.Clear();
@@ -101,6 +105,11 @@ namespace Account_Registration
                 AgeTextBox.Clear();
                 ContactNoTextBox.Clear();
                 StudentNoTextBox.Clear();
+
+
+
+
+               
             }
         }
 
