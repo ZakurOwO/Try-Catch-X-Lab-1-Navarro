@@ -54,5 +54,10 @@ namespace Account_Registration
         {
            this.Close();
         }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

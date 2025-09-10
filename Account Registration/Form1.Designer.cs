@@ -42,9 +42,11 @@
             this.C = new System.Windows.Forms.Label();
             this.AgeTextBox = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.AddressTextBox = new System.Windows.Forms.RichTextBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
+            this.cbGender = new System.Windows.Forms.ComboBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.datePickerBirtday = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
             // 
             // label1
@@ -133,29 +135,32 @@
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(241)))), ((int)(((byte)(199)))));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(98)))), ((int)(((byte)(106)))));
-            this.label5.Location = new System.Drawing.Point(245, 118);
+            this.label5.Location = new System.Drawing.Point(248, 118);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(72, 13);
             this.label5.TabIndex = 8;
             this.label5.Text = "Middle Name:";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // ContactNoTextBox
             // 
-            this.ContactNoTextBox.Location = new System.Drawing.Point(139, 175);
+            this.ContactNoTextBox.Location = new System.Drawing.Point(248, 175);
             this.ContactNoTextBox.Name = "ContactNoTextBox";
             this.ContactNoTextBox.Size = new System.Drawing.Size(100, 20);
             this.ContactNoTextBox.TabIndex = 13;
+            this.ContactNoTextBox.TextChanged += new System.EventHandler(this.ContactNoTextBox_TextChanged);
             // 
             // C
             // 
             this.C.AutoSize = true;
             this.C.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(241)))), ((int)(((byte)(199)))));
             this.C.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(98)))), ((int)(((byte)(106)))));
-            this.C.Location = new System.Drawing.Point(136, 159);
+            this.C.Location = new System.Drawing.Point(248, 159);
             this.C.Name = "C";
             this.C.Size = new System.Drawing.Size(64, 13);
             this.C.TabIndex = 12;
             this.C.Text = "Contact No.";
+            this.C.Click += new System.EventHandler(this.C_Click);
             // 
             // AgeTextBox
             // 
@@ -175,32 +180,57 @@
             this.label7.TabIndex = 10;
             this.label7.Text = "Age:";
             // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(28, 255);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(48, 13);
-            this.label8.TabIndex = 14;
-            this.label8.Text = "Address:";
-            // 
-            // AddressTextBox
-            // 
-            this.AddressTextBox.Location = new System.Drawing.Point(30, 271);
-            this.AddressTextBox.Name = "AddressTextBox";
-            this.AddressTextBox.Size = new System.Drawing.Size(318, 121);
-            this.AddressTextBox.TabIndex = 15;
-            this.AddressTextBox.Text = "";
-            // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(154, 398);
+            this.button1.Location = new System.Drawing.Point(149, 261);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 16;
             this.button1.Text = "Next";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(241)))), ((int)(((byte)(199)))));
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(98)))), ((int)(((byte)(106)))));
+            this.label6.Location = new System.Drawing.Point(134, 159);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(45, 13);
+            this.label6.TabIndex = 17;
+            this.label6.Text = "Gender:";
+            // 
+            // cbGender
+            // 
+            this.cbGender.FormattingEnabled = true;
+            this.cbGender.Items.AddRange(new object[] {
+            "Male",
+            "Female",
+            "N/A"});
+            this.cbGender.Location = new System.Drawing.Point(137, 175);
+            this.cbGender.Name = "cbGender";
+            this.cbGender.Size = new System.Drawing.Size(102, 21);
+            this.cbGender.TabIndex = 18;
+            this.cbGender.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(241)))), ((int)(((byte)(199)))));
+            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(98)))), ((int)(((byte)(106)))));
+            this.label8.Location = new System.Drawing.Point(9, 198);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(48, 13);
+            this.label8.TabIndex = 19;
+            this.label8.Text = "Birthday:";
+            // 
+            // datePickerBirtday
+            // 
+            this.datePickerBirtday.Location = new System.Drawing.Point(12, 214);
+            this.datePickerBirtday.Name = "datePickerBirtday";
+            this.datePickerBirtday.Size = new System.Drawing.Size(200, 20);
+            this.datePickerBirtday.TabIndex = 21;
             // 
             // Form1
             // 
@@ -210,10 +240,12 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(241)))), ((int)(((byte)(199)))));
             this.BackgroundImage = global::Account_Registration.Properties.Resources.wallpaperflare_com_wallpaper;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(377, 450);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.AddressTextBox);
+            this.ClientSize = new System.Drawing.Size(377, 296);
+            this.Controls.Add(this.datePickerBirtday);
             this.Controls.Add(this.label8);
+            this.Controls.Add(this.cbGender);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.ContactNoTextBox);
             this.Controls.Add(this.C);
             this.Controls.Add(this.AgeTextBox);
@@ -254,10 +286,12 @@
         private System.Windows.Forms.Label C;
         private System.Windows.Forms.TextBox AgeTextBox;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.RichTextBox AddressTextBox;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox FirstNameTextBox;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.ComboBox cbGender;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.DateTimePicker datePickerBirtday;
     }
 }
 

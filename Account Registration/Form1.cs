@@ -84,7 +84,7 @@ namespace Account_Registration
             StudentInfoClass.FirstName = FirstNameTextBox.Text;
             StudentInfoClass.LastName = LastNameTextBox.Text;
             StudentInfoClass.MiddleName = MiddleNameTextBox.Text;
-            StudentInfoClass.Address = AddressTextBox.Text;
+           
             StudentInfoClass.Program = ProgramTextBox.Text;
             StudentInfoClass.Age = long.Parse(AgeTextBox.Text);
             StudentInfoClass.ContactNo = long.Parse(ContactNoTextBox.Text);
@@ -100,7 +100,7 @@ namespace Account_Registration
                 FirstNameTextBox.Clear();
                 LastNameTextBox.Clear();
                 MiddleNameTextBox.Clear();
-                AddressTextBox.Clear();
+              
                 ProgramTextBox.Clear();
                 AgeTextBox.Clear();
                 ContactNoTextBox.Clear();
@@ -119,6 +119,26 @@ namespace Account_Registration
         }
 
         private void LastNameTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void C_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ContactNoTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

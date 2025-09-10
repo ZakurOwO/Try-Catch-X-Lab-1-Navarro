@@ -35,9 +35,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.LabelAddress = new System.Windows.Forms.Label();
             this.LabelContactNo = new System.Windows.Forms.Label();
             this.LabelAge = new System.Windows.Forms.Label();
             this.LabelMiddleName = new System.Windows.Forms.Label();
@@ -45,6 +43,10 @@
             this.LabelLastName = new System.Windows.Forms.Label();
             this.LabelProgram = new System.Windows.Forms.Label();
             this.LabelStudentNo = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.labelGender = new System.Windows.Forms.Label();
+            this.labelBirhday = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // button1
@@ -131,41 +133,17 @@
             this.label6.TabIndex = 5;
             this.label6.Text = "Middle Name:";
             // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(241)))), ((int)(((byte)(199)))));
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(98)))), ((int)(((byte)(106)))));
-            this.label7.Location = new System.Drawing.Point(33, 256);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(66, 18);
-            this.label7.TabIndex = 8;
-            this.label7.Text = "Address:";
-            // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(241)))), ((int)(((byte)(199)))));
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(98)))), ((int)(((byte)(106)))));
-            this.label8.Location = new System.Drawing.Point(33, 228);
+            this.label8.Location = new System.Drawing.Point(33, 290);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(64, 18);
             this.label8.TabIndex = 7;
             this.label8.Text = "Contact:";
-            // 
-            // LabelAddress
-            // 
-            this.LabelAddress.AutoSize = true;
-            this.LabelAddress.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(241)))), ((int)(((byte)(199)))));
-            this.LabelAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.LabelAddress.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(98)))), ((int)(((byte)(106)))));
-            this.LabelAddress.Location = new System.Drawing.Point(163, 256);
-            this.LabelAddress.Name = "LabelAddress";
-            this.LabelAddress.Size = new System.Drawing.Size(46, 18);
-            this.LabelAddress.TabIndex = 16;
-            this.LabelAddress.Text = "label9";
             // 
             // LabelContactNo
             // 
@@ -173,7 +151,7 @@
             this.LabelContactNo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(241)))), ((int)(((byte)(199)))));
             this.LabelContactNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.LabelContactNo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(98)))), ((int)(((byte)(106)))));
-            this.LabelContactNo.Location = new System.Drawing.Point(163, 228);
+            this.LabelContactNo.Location = new System.Drawing.Point(163, 290);
             this.LabelContactNo.Name = "LabelContactNo";
             this.LabelContactNo.Size = new System.Drawing.Size(54, 18);
             this.LabelContactNo.TabIndex = 15;
@@ -251,6 +229,55 @@
             this.LabelStudentNo.TabIndex = 9;
             this.LabelStudentNo.Text = "label16";
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(241)))), ((int)(((byte)(199)))));
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(98)))), ((int)(((byte)(106)))));
+            this.label7.Location = new System.Drawing.Point(33, 226);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(61, 18);
+            this.label7.TabIndex = 16;
+            this.label7.Text = "Gender:";
+            this.label7.Click += new System.EventHandler(this.label7_Click);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(241)))), ((int)(((byte)(199)))));
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(98)))), ((int)(((byte)(106)))));
+            this.label9.Location = new System.Drawing.Point(33, 258);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(61, 18);
+            this.label9.TabIndex = 17;
+            this.label9.Text = "Birthday";
+            // 
+            // labelGender
+            // 
+            this.labelGender.AutoSize = true;
+            this.labelGender.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(241)))), ((int)(((byte)(199)))));
+            this.labelGender.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.labelGender.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(98)))), ((int)(((byte)(106)))));
+            this.labelGender.Location = new System.Drawing.Point(163, 226);
+            this.labelGender.Name = "labelGender";
+            this.labelGender.Size = new System.Drawing.Size(54, 18);
+            this.labelGender.TabIndex = 18;
+            this.labelGender.Text = "label11";
+            // 
+            // labelBirhday
+            // 
+            this.labelBirhday.AutoSize = true;
+            this.labelBirhday.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(241)))), ((int)(((byte)(199)))));
+            this.labelBirhday.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.labelBirhday.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(98)))), ((int)(((byte)(106)))));
+            this.labelBirhday.Location = new System.Drawing.Point(163, 258);
+            this.labelBirhday.Name = "labelBirhday";
+            this.labelBirhday.Size = new System.Drawing.Size(54, 18);
+            this.labelBirhday.TabIndex = 19;
+            this.labelBirhday.Text = "label11";
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -258,7 +285,10 @@
             this.BackgroundImage = global::Account_Registration.Properties.Resources.honkai_star_rail_anime_anime_games_anime_girls_firefly_honkai_star_rail_hd_wallpaper_preview;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(295, 450);
-            this.Controls.Add(this.LabelAddress);
+            this.Controls.Add(this.labelBirhday);
+            this.Controls.Add(this.labelGender);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.LabelContactNo);
             this.Controls.Add(this.LabelAge);
             this.Controls.Add(this.LabelMiddleName);
@@ -266,7 +296,6 @@
             this.Controls.Add(this.LabelLastName);
             this.Controls.Add(this.LabelProgram);
             this.Controls.Add(this.LabelStudentNo);
-            this.Controls.Add(this.label7);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label6);
@@ -293,9 +322,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label LabelAddress;
         private System.Windows.Forms.Label LabelContactNo;
         private System.Windows.Forms.Label LabelAge;
         private System.Windows.Forms.Label LabelMiddleName;
@@ -303,5 +330,9 @@
         private System.Windows.Forms.Label LabelLastName;
         private System.Windows.Forms.Label LabelProgram;
         private System.Windows.Forms.Label LabelStudentNo;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label labelGender;
+        private System.Windows.Forms.Label labelBirhday;
     }
 }
