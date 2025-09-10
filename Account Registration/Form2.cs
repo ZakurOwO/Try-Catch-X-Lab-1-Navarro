@@ -14,9 +14,7 @@ namespace Account_Registration
     public partial class Form2 : Form
     {
         private StudentInfoClass.DelegateText DelProgram;
-        private StudentInfoClass.DelegateText DelLastName;
-        private StudentInfoClass.DelegateText DelFirstName;
-        private StudentInfoClass.DelegateText DelMiddleName;
+        private StudentInfoClass.DelegateText Name;
         private StudentInfoClass.DelegateText DelAddress;
         private StudentInfoClass.DelegateNumber DelAge;
         private StudentInfoClass.DelegateNumber DelContactNo;
@@ -28,9 +26,7 @@ namespace Account_Registration
 
 
             DelProgram = new StudentInfoClass.DelegateText(StudentInfoClass.GetProgram);
-            DelLastName = new StudentInfoClass.DelegateText(StudentInfoClass.GetLastName);
-            DelFirstName = new StudentInfoClass.DelegateText(StudentInfoClass.GetFirstName);
-            DelMiddleName = new StudentInfoClass.DelegateText(StudentInfoClass.GetMiddleName);
+            Name = new StudentInfoClass.DelegateText(StudentInfoClass.GetLastName);
             DelAddress = new StudentInfoClass.DelegateText(StudentInfoClass.GetAddress);
             DelAge = new StudentInfoClass.DelegateNumber(StudentInfoClass.GetAge);
             DelContactNo = new StudentInfoClass.DelegateNumber(StudentInfoClass.GetContactNo);
@@ -41,10 +37,9 @@ namespace Account_Registration
         {
 
             LabelProgram.Text = DelProgram(StudentInfoClass.Program);
-            LabelLastName.Text = DelLastName(StudentInfoClass.LastName);
-            LabelFirstName.Text = DelFirstName(StudentInfoClass.FirstName);
-            LabelMiddleName.Text = DelMiddleName(StudentInfoClass.MiddleName);
-            LabelAddress.Text = DelAddress(StudentInfoClass.Address);
+            LabelLastName.Text = Name(StudentInfoClass.LastName);
+           
+            
             LabelAge.Text = DelAge(StudentInfoClass.Age).ToString();
             LabelContactNo.Text = DelContactNo(StudentInfoClass.ContactNo).ToString();
             LabelStudentNo.Text = DelStudentNo(StudentInfoClass.StudentNo).ToString();
@@ -52,7 +47,7 @@ namespace Account_Registration
 
         private void button1_Click(object sender, EventArgs e)
         {
-           this.Close();
+
         }
 
         private void label7_Click(object sender, EventArgs e)

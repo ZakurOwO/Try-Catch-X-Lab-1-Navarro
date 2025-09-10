@@ -30,7 +30,6 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.StudentNoTextBox = new System.Windows.Forms.TextBox();
-            this.ProgramTextBox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.LastNameTextBox = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -47,6 +46,7 @@
             this.cbGender = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.datePickerBirtday = new System.Windows.Forms.DateTimePicker();
+            this.cbPrograms = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // label1
@@ -66,13 +66,6 @@
             this.StudentNoTextBox.Name = "StudentNoTextBox";
             this.StudentNoTextBox.Size = new System.Drawing.Size(100, 20);
             this.StudentNoTextBox.TabIndex = 1;
-            // 
-            // ProgramTextBox
-            // 
-            this.ProgramTextBox.Location = new System.Drawing.Point(137, 77);
-            this.ProgramTextBox.Name = "ProgramTextBox";
-            this.ProgramTextBox.Size = new System.Drawing.Size(183, 20);
-            this.ProgramTextBox.TabIndex = 3;
             // 
             // label2
             // 
@@ -117,7 +110,7 @@
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(241)))), ((int)(((byte)(199)))));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(98)))), ((int)(((byte)(106)))));
-            this.label4.Location = new System.Drawing.Point(136, 118);
+            this.label4.Location = new System.Drawing.Point(134, 118);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(60, 13);
             this.label4.TabIndex = 6;
@@ -125,6 +118,7 @@
             // 
             // MiddleNameTextBox
             // 
+            this.MiddleNameTextBox.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.MiddleNameTextBox.Location = new System.Drawing.Point(248, 134);
             this.MiddleNameTextBox.Name = "MiddleNameTextBox";
             this.MiddleNameTextBox.Size = new System.Drawing.Size(100, 20);
@@ -232,6 +226,14 @@
             this.datePickerBirtday.Size = new System.Drawing.Size(200, 20);
             this.datePickerBirtday.TabIndex = 21;
             // 
+            // cbPrograms
+            // 
+            this.cbPrograms.FormattingEnabled = true;
+            this.cbPrograms.Location = new System.Drawing.Point(137, 77);
+            this.cbPrograms.Name = "cbPrograms";
+            this.cbPrograms.Size = new System.Drawing.Size(121, 21);
+            this.cbPrograms.TabIndex = 22;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -241,6 +243,7 @@
             this.BackgroundImage = global::Account_Registration.Properties.Resources.wallpaperflare_com_wallpaper;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(377, 296);
+            this.Controls.Add(this.cbPrograms);
             this.Controls.Add(this.datePickerBirtday);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.cbGender);
@@ -256,7 +259,6 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.LastNameTextBox);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.ProgramTextBox);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.StudentNoTextBox);
             this.Controls.Add(this.label1);
@@ -275,7 +277,6 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox StudentNoTextBox;
-        private System.Windows.Forms.TextBox ProgramTextBox;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox LastNameTextBox;
         private System.Windows.Forms.Label label3;
@@ -292,6 +293,7 @@
         private System.Windows.Forms.ComboBox cbGender;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.DateTimePicker datePickerBirtday;
+        private System.Windows.Forms.ComboBox cbPrograms;
     }
 }
 

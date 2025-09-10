@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Text.RegularExpressions;
 
 namespace Account_Registration
 {
@@ -26,27 +27,18 @@ namespace Account_Registration
             public delegate long DelegateNumber(long number);
             public delegate string DelegateText(string txt);
 
-            public static String FirstName = " ";
-            public static String LastName = " ";
-            public static String MiddleName = " ";
+            public static String Name = " ";
             public static String Address = " ";
             public static String Program = " ";
             public static long Age = 0;
             public static long ContactNo = 0;
             public static long StudentNo = 0;
 
-            public static String GetFirstName(string FirstName)
+            public static String GetName(string Name)
             {
-                return FirstName;
+                return Name;
             }
-            public static String GetLastName(string LastName)
-            {
-                return LastName;
-            }
-            public static String GetMiddleName(string MiddleName)
-            {
-                return MiddleName;
-            }
+           
             public static String GetAddress(string Address)
             {
                 return Address;
@@ -72,20 +64,88 @@ namespace Account_Registration
 
 
         private void Form1_Load(object sender, EventArgs e)
+
+
+        {
+            string[] ListOfPrograms = new string[]
+            {
+                "BS Information Technology",
+                "BS Computer Science",
+                "BS in Accountancy",
+                "BS in Hospitality Management",
+                "BS in Tourism Management",
+            };
+            for (int i = 0; i < 6; i++)
+            {
+               cbPrograms.Items.Add(ListOfPrograms[i]);
+            }
+            
+
+        }
+
+        /////return methods 
+
+        public static int SetStudentNo = 0;
+        public static int Set_ContactNo = 0;
+
+        public static string SetProgram = " ";
+        public static string SetGender = " ";
+        public static string SetBirtday = " ";
+        public static string SetFullName = " ";
+
+
+        private string _FullName;
+        private long _ContactNo;
+        private int _Age;
+        private long _StudentNo;
+        public long StudentNumber(string studNum)
         {
 
+            _StudentNo = long.Parse(studNum);
+
+            return _StudentNo;
+        }
+
+        public long ContactNo(string Contact)
+        {
+            if (Regex.IsMatch(Contact, @"^[0-9]{10,11}$"))
+            {
+                _ContactNo = long.Parse(Contact);
+            }
+
+            return _ContactNo;
+        }
+
+        public string FullName(string LastName, string FirstName, string MiddleInitial)
+        {
+            if (Regex.IsMatch(LastName, @"^[a-zA-Z]+$") || Regex.IsMatch(FirstName, @"^[a-zA-Z]+$") || Regex.IsMatch(MiddleInitial, @"^[a-zA-Z]+$"))
+            {
+                _FullName = LastName + ", " + FirstName + ", " + MiddleInitial;
+            }
+
+            return _FullName;
+        }
+
+        public int Age(string age)
+        {
+            if (Regex.IsMatch(age, @"^[0-9]{1,3}$"))
+            {
+                _Age = Int32.Parse(age);
+            }
+
+            return _Age;
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
 
 
-            StudentInfoClass.FirstName = FirstNameTextBox.Text;
-            StudentInfoClass.LastName = LastNameTextBox.Text;
-            StudentInfoClass.MiddleName = MiddleNameTextBox.Text;
-           
-            StudentInfoClass.Program = ProgramTextBox.Text;
+            StudentInfoClass.Name = LastNameTextBox.Text;
+            StudentInfoClass.Name = FirstNameTextBox.Text;
+            StudentInfoClass.Name = MiddleNameTextBox.Text;
+
+
+
             StudentInfoClass.Age = long.Parse(AgeTextBox.Text);
             StudentInfoClass.ContactNo = long.Parse(ContactNoTextBox.Text);
             StudentInfoClass.StudentNo = long.Parse(StudentNoTextBox.Text);
@@ -101,7 +161,6 @@ namespace Account_Registration
                 LastNameTextBox.Clear();
                 MiddleNameTextBox.Clear();
               
-                ProgramTextBox.Clear();
                 AgeTextBox.Clear();
                 ContactNoTextBox.Clear();
                 StudentNoTextBox.Clear();
